@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/input.css" />
+  </head>
+  <body class="font-sans">
+    <div class="container mx-auto">
+      <h1 class="bg-slate-950 text-white text-center text-4xl py-4">
+        Welcome To Pioneer Bank
+      </h1>
+    </div>
+
+    <section class="container mx-auto">
+      <div id="login_form" class="shadow-lg p-4 mt-6">
+        <label for="text" class="block my-4 text-xl">User Name</label>
+        <input
+          type="text"
+          placeholder="username"
+          class="bg-white border mb-4 rounded w-7/12 px-4 py-2"
+        />
+        <label for="password" class="block my-4 text-xl">Password</label>
+        <input
+          type="password"
+          placeholder="password"
+          class="bg-white border mb-4 rounded w-7/12 px-4 py-2"
+        />
+        <button
+          id="login_btn"
+          class="block bg-sky-500 px-5 py-2 text-white font-semibold mt-4"
+        >
+          Enter
+        </button>
+      </div>
+    </section>
+    <section class="container mx-auto hidden" id="transaction-area">
+      <div
+        class="grid grid-cols-3 mt-5 p-4 text-white gap-2"
+      >
+        <div class="bg-blue-700 p-6 rounded-xl">
+          <h4 class="text-xl">Deposit</h4>
+          <h2 class="text-3xl my-2">$ <span id="current_deposit">00</span></h2>
+        </div>
+        <div class="bg-yellow-700 p-6 rounded-xl">
+          <h4 class="text-xl">Withdraw</h4>
+          <h2 class="text-3xl my-2">$ <span id="current_withdraw">00</span></h2>
+        </div>
+        <div class="bg-orange-700 p-6 rounded-xl">
+          <h4 class="text-xl">Balance</h4>
+          <h2 class="text-3xl my-2">$ <span id="current_balance">4720</span></h2>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 my-6 gap-2">
+        <div class="bg-slate-200 shadow-lg p-4 rounded-lg">
+          <h4 class="my-4 font-semibold text-2xl">Deposit</h4>
+          <input
+            id="deposit_amount"
+            type="text"
+            placeholder="Deposit Amount"
+            class="bg-white border mb-4 rounded px-4 py-2"
+          />
+          <button
+            id="deposit_btn"
+            class="block bg-sky-500 px-5 py-2 text-white font-semibold mt-4"
+          >
+            Deposit
+          </button>
+        </div>
+        <div class="bg-slate-200 shadow-lg p-4 rounded-lg">
+          <h4 class="my-4 font-semibold text-2xl">Withdraw</h4>
+          <input
+            id="withdraw_amount"
+            type="text"
+            placeholder="Withdraw Amount"
+            class="bg-white border mb-4 rounded px-4 py-2"
+          />
+          <button
+            id="withdraw_btn"
+            class="block bg-sky-500 px-5 py-2 text-white font-semibold mt-4"
+          >
+            Withdraw
+          </button>
+        </div>
+      </div>
+    </section>
+    <script src="js/script.js"></script>
+  </body>
+</html>
